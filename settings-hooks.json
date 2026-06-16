@@ -1,0 +1,103 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/session_start/*.mp3); afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/user_prompt_submit/*.mp3); afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/pre_tool_use/*.mp3); [[ ${#f[@]} -gt 0 ]] && afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/post_tool_use/*.mp3); [[ ${#f[@]} -gt 0 ]] && afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/post_tool_use_failure/*.mp3); afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/stop/*.mp3); afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/notification/*.mp3); afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/pre_compact/*.mp3); [[ ${#f[@]} -gt 0 ]] && afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=(~/.ai_coding_hooks/post_compact/*.mp3); [[ ${#f[@]} -gt 0 ]] && afplay -v 0.025 \"${f[$((RANDOM % ${#f[@]}))]}\"",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
