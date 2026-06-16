@@ -1,3 +1,5 @@
+![claude-sounds](cover.jpg)
+
 # claude-sounds
 
 Movie-quote MP3 clips that play as Claude Code hook sounds on macOS.
